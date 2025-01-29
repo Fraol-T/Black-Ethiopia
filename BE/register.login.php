@@ -14,9 +14,9 @@
         $sql = "INSERT INTO userinfo (name, email, password) VALUES ('$name','email', '$hashedPassword')";
     
         if ($conn->query($sql) === TRUE) {
-           redirect('home.php');
+           redirect('login.php');
         } else {
             $status = "The provided credentials did not work";
-            redirect('log.php');
+            redirect('home.php');
         }
     }

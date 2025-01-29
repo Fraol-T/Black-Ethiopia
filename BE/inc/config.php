@@ -1,4 +1,4 @@
 <?php
-    const EMAIL = 'raolta6@gmail.com';
-    const PASSWORD = 'flashman121w';
+    const EMAIL = 'user@gmail.com';
+    const PASSWORD = '1234';
     

@@ -1,25 +1,25 @@
-<?php
-   
-    function view($name, $model){
+<?php  
+   function redirect($url){
+    return header("location: $url");
+} 
+   function view($name, $model){
         require 'view/layout.view.php';
     }
 
-    function redirect($url){
-        return header("location: $url");
-    }
-
-    function authenticate_user($email,$password){
+    function authenticate($email, $password){
 
         require 'db.php';
             
-            $sql = "SELECT * FROM userinfo WHERE email='$email'";
-            $result = $conn->query($sql);
-            $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-            return ($email == $row['email'] && $password == $row['password']);
-
-            
+        $sql = "SELECT * FROM userinfo WHERE id='1'";
+        $result = $conn->query($sql);
+        $row = $result->fetch(PDO::FETCH_ASSOC);
+        $e = $row['email'];
+        $p = $row['password']; 
+            return  $e; //($email == $e && $password == $p);
     } 
+    function user_authenticate($email, $password){
+        return ($email == EMAIL && $password == PASSWORD);
+    }
 
     function is_user_authenticated(){
         return isset($_SESSION['email']);

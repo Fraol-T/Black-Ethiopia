@@ -7,7 +7,7 @@
         <label for="password">Password</label><br>
         <input type="password" name= "password" placeholder="Password" required /><br><br>
         <button type="submit">Sign In</button>
-  
+        
         <?php if(isset($status)): ?>
           <p><?= $status ?></p>
         <?php endif; ?>

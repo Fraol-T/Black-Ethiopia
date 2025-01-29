@@ -14,7 +14,7 @@
         redirect('index.php');
     }else{
         $status = "The provided credentials did not work";
-        redirect('test.php');
+        redirect('login.php');
     }
 
     if($email == false){
